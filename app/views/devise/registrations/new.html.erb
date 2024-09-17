@@ -1,0 +1,42 @@
+<div  class="flex flex-col justify-center items-center bg-gradient-to-tr 
+ h-screen from-sky-300 to-sky-400">
+ <div class="bg-slate-100 shadow-lg p-5 w-[400px] h-fit
+ flex flex-col items-center rounded-lg gap-5">
+    <h2 class="text-sky-500 drop-shadow-sm font-bold text-3xl ">Sign up</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="flex flex-col gap-5">
+        <div class="field ">
+          <%= f.label :email , class:"font-semibold"%><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",
+          class:"min-w-[375px] rounded-md p-2  border border-slate-300 bg-slate-100" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password, class:"font-semibold" %>
+          <% if @minimum_password_length %>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password",
+          class:"min-w-[375px] rounded-md p-2  border border-slate-300 bg-slate-100" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation, class:"font-semibold"%><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password",
+          class:"min-w-[375px] rounded-md p-2  border border-slate-300 bg-slate-100" %>
+        </div>
+
+        <div class="actions flex justify-center">
+          <%= f.submit "Sign up", 
+          class:"bg-slate-900 text-slate-100 px-5 py-2 rounded-md font-semibold w-full mt-5" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="flex flex-col justify-center items-center text-center">
+      <%= render "devise/shared/links" %>
+ 
+
+    </div>
+  </div>
+</div>
