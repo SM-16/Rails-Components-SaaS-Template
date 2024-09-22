@@ -1,30 +1,31 @@
-# README
+# Locomotive Docs
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
-<img src="https://media.licdn.com/dms/image/v2/D5610AQF8PJ3hw02UOw/image-shrink_800/image-shrink_800/0/1708701304012?e=2147483647&v=beta&t=0y7aLTMElor7xr1ftvazP3b28vvnz2zHHKUhY6XRrU0"/>
-* System dependencies
+## Environment variables
+in the file .env you can se all your environment variables for stripe payments
 
-* Configuration
 
-* Database creation
+### Remember:
+Do not forget to add your stripe Price Id in \app\controllers\stripe_controller.rb
 
-* Database initialization
+    def checkout
+        @session = Stripe::Checkout::Session.create({
+            mode:"subscription",
+            success_url: root_url,
+            cancel_url: root_url,
+            customer: current_user.stripe_customer_id,
+            line_items:[{
+                price:"price_1PwegBKa5vbvZR8VKEpXyIe4",
+                quantity: 1,
+            }]
+        })
+        redirect_to @session.url, status: 303, allow_other_host: true
+    end
+    
+## Stripe initializer
 
-* How to run the test suite
+in the file \config\initializers\stripe.rb
 
-* Services (job queues, cache servers, search engines, etc.)
+Remember changing your stripe api key .env variable from STRIPE_SECRET_API_KEY (test) to STRIPE_SECRET_LIVE_API_KEY (live) in production,
 
-* Deployment instructions
-
-* ...
-# InstaShip
-# InstaShip
-# InstaShip
-# InstaShip
-# Locomotive
-# Locomotive
