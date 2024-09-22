@@ -27,5 +27,9 @@ Do not forget to add your stripe Price Id in \app\controllers\stripe_controller.
 
 in the file \config\initializers\stripe.rb
 
+require 'stripe'
+Stripe.api_key = ENV['STRIPE_SECRET_API_KEY']
+
+
 Remember changing your stripe api key .env variable from STRIPE_SECRET_API_KEY (test) to STRIPE_SECRET_LIVE_API_KEY (live) in production,
 
