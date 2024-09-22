@@ -61,5 +61,3 @@ gem "stripe"
 
 # Authentication
 gem "devise", "~> 4.9"
-gem 'omniauth-github', '~> 2.0', '>= 2.0.1'
-gem 'omniauth-rails_csrf_protection'
