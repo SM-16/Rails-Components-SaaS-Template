@@ -1,6 +1,6 @@
 # Locomotive Docs
 
-<img src="https://salty-coast-45816-cbab611b455b.herokuapp.com/icon.png" width="500pxx"></img>
+<img src="https://salty-coast-45816-cbab611b455b.herokuapp.com/icon.png" width="300px"></img>
 
 ## Environment variables
 in the file \.env 
