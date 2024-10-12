@@ -1,0 +1,286 @@
+
+/************
+ * * Fade in
+*************/
+.fade-in {
+    animation: fade-in 1s ease-in-out forwards;
+    -webkit-animation: fade-in 1s ease-in-out forwards;
+  }
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.fade-down {
+    animation: fade-down 1s ease-out forwards;
+    -webkit-animation: fade-down 1s ease-out forwards;
+}
+@keyframes fade-down {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}    
+  
+
+
+      
+.fade-left {
+    animation: fade-left 1s ease-in-out forwards; 
+    -webkit-animation: fade-left 1s ease-in-out forwards;
+}
+@keyframes fade-left {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.fade-right {
+    animation: fade-right 1s ease-in-out forwards;
+    -webkit-animation: fade-right 1s ease-in-out forwards;
+}
+@keyframes fade-right {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+.fade-up {
+    animation: fade-up 1s ease-out forwards;
+    -webkit-animation: fade-up 1s ease-out forwards;
+}
+@keyframes fade-up {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/************
+ * * Fade out
+*************/
+
+.fade-out {
+    animation: fade-out 1s ease-out forwards;
+    -webkit-animation: fade-out 1s ease-out forwards;
+}
+@keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+/************
+ * * Fly In
+*************/
+
+.fly-in {
+    animation: fly-in 1s ease-out forwards;
+    -webkit-animation: fly-in 1s ease-out forwards;
+}
+  @keyframes fly-in {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.fly-down {
+    animation: fly-down 1s ease-out forwards;
+    -webkit-animation: fly-down 1s ease-out forwards;
+}
+@keyframes fly-down {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.fly-up {
+    animation: fly-up 1s ease-out forwards;
+    -webkit-animation: fly-up 1s ease-out forwards;
+}
+@keyframes fly-up {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.fly-right {
+    animation: fly-right 1s ease-out forwards;
+    -webkit-animation: fly-right 1s ease-out forwards;
+}
+@keyframes fly-right {
+    from {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+  
+.fly-left {
+    animation: fly-left 1s ease-out forwards;
+    -webkit-animation: fly-left 1s ease-out forwards;
+}
+@keyframes fly-left {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+  
+/************
+ * * Fly out
+*************/
+.fly-out {
+    animation: fly-out 1s ease-out forwards;
+    -webkit-animation: fly-out 1s ease-out forwards;
+}
+@keyframes fly-out {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+/************
+ * * Funny animations
+*************/
+
+
+.jiggle {
+    animation: jiggle 1s ease-out forwards;
+    -webkit-animation: jiggle 1s ease-out forwards;
+}
+@keyframes jiggle {
+    0% {
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      transform: scale3d(1, 1, 1);
+    }
+}
+
+.shake {
+    animation: shake 1s ease-out forwards;
+    -webkit-animation: shake 1s ease-out forwards;
+}
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+}
+
+.wiggle {
+    animation: wiggle 1s ease-out forwards;
+    -webkit-animation: wiggle 1s ease-out forwards;
+}
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+}
+  

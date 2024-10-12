@@ -1,8 +1,11 @@
-<div  class="flex flex-col justify-center items-center bg-gradient-to-tr 
- h-screen from-sky-300 to-sky-400">
- <div class="bg-slate-100 shadow-lg p-5 w-[400px] h-fit
- flex flex-col items-center rounded-lg gap-5">
-    <h2 class="text-sky-500 drop-shadow-sm font-bold text-3xl ">Sign up</h2>
+<div  class="flex flex-col justify-center items-center bg-gradient-to-tr h-screen from-red-500 to-rose-500">
+ 
+  <%= link_to root_path do%>
+    <svg class="absolute top-5 left-4 stroke-slate-100" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left"><path d="M18 15h-6v4l-7-7 7-7v4h6v6z"/></svg>
+  <%end%>
+
+  <div class="bg-slate-100 shadow-lg p-4 w-[400px] h-fit flex flex-col items-center rounded-lg gap-5">
+    <h2 class="text-red-500 drop-shadow-sm font-bold text-3xl ">Sign up</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
@@ -33,7 +36,8 @@
         </div>
       </div>
     <% end %>
-    <div class="flex flex-col justify-center items-center text-center">
+    <div class="w-full  ">
+
       <%= render "devise/shared/links" %>
  
 

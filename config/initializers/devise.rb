@@ -25,9 +25,11 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
-
+  
+  config.omniauth :google_oauth2, ENV['GOOGLE_OAUTH_CLIENT_ID'], ENV['GOOGLE_OAUTH_CLIENT_SECRET']
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
+
 
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
@@ -271,7 +273,6 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :github, 'Ov23linxbnxyc04zMlV6', '9bad250780e2ca91289c65a2b502e697410a8d7f'
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

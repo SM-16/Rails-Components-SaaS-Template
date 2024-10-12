@@ -8,7 +8,7 @@ class StripeController < ApplicationController
             cancel_url: root_url,
             customer: current_user.stripe_customer_id,
             line_items:[{
-                price:"price_1PwegBKa5vbvZR8VKEpXyIe4",
+                price:"your-price-id",
                 quantity: 1,
             }]
         })

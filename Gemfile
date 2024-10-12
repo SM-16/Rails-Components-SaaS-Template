@@ -58,8 +58,11 @@ end
 
 gem 'dotenv'
 gem "stripe"
+gem 'meta-tags'
+
 
 # Authentication
 gem "devise", "~> 4.9"
-gem 'omniauth-github', '~> 2.0', '>= 2.0.1'
+gem 'omniauth' 
+gem 'omniauth-google-oauth2' 
 gem 'omniauth-rails_csrf_protection'

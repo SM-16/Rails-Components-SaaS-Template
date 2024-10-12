@@ -17,7 +17,11 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   
   # Devise  
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { 
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+    omniauth_callbacks: 'users/omniauth_callbacks',
+  }
 
   # Stripe
   post "stripe/checkout", to: "stripe#checkout"

@@ -3,8 +3,25 @@
   <head>
     <title>Locomotive</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+    <%= display_meta_tags site: "Locomotive",
+      title:"Locomotive",
+      description: "Ruby on Rails SaaS boilierplate",
+      icon:"icon.png",
+      keywords:"Ruby on Rails, rails, SaaS, boilerplate, Locomotive, entrepreneurship",
+      image: asset_url("icon.png"),
+      og:{
+        title: :title,
+        description: :description,
+        image: asset_url("icon.png")
+
+      }
+    %>
+
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <%= csrf_meta_tags %>
+    <%= csrf_meta_tag %>
+    
     <%= csp_meta_tag %>
 
     <%= yield :head %>

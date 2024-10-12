@@ -10,9 +10,7 @@
     </nav>
     <div class="flex w-full justify-end items-center gap-5 mr-">
         <%if user_signed_in?%>
-            <p class="font-medium">
-                <%= current_user.stripe_customer_id %>
-            </p>
+
             <p class="border border-red-300 bg-red-100 text-red-500 rounded-md px-3 p-1">
                 <%= current_user.plan%>
             </p>
