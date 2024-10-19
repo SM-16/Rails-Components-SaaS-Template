@@ -357,7 +357,7 @@ DEPENDENCIES
   dotenv
   importmap-rails
   jbuilder
-  meta-tags
+  meta-tags (~> 2.22, >= 2.22.1)
   omniauth
   omniauth-google-oauth2
   omniauth-rails_csrf_protection

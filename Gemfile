@@ -58,8 +58,7 @@ end
 
 gem 'dotenv'
 gem "stripe"
-gem 'meta-tags'
-
+gem 'meta-tags', '~> 2.22', '>= 2.22.1'
 
 # Authentication
 gem "devise", "~> 4.9"
