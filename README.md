@@ -1,7 +1,7 @@
 <img src="https://www.locomotive.it.com/icon.png" style="width: 100px">
 <h1>Locomotive Docs</h1>
 <h2>
-  ChatGPT privacy & Policy prompts
+  ChatGPT privacy & Policy prompts (Copy text nº 1 and 2 to chatGPT)
 </h2>
 
   <p>  
