@@ -1,4 +1,4 @@
-<img src="https://www.locomotive.it.com/icon.png" style="width: 100px">
+<img src="[https://www.locomotive.it.com/icon.png](https://railselements-81cec58e1456.herokuapp.com/icon(16).png)" style="width: 100px">
 <h1>Locomotive Docs</h1>
 <h2>
   Configure your stripe and Google OAuth variables here
