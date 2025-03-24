@@ -1,0 +1,111 @@
+<br id="home">
+
+<div class="flex flex-col lg:justify-start justify-center items-center h-full w-full p-5 px-10 mx-20" data-turbo="false">
+    <div class="flex lg:flex-row flex-col-reverse justify-center items-center lg:mt-32 -mt-20"  data-turbo="false">
+        <div class="fade-left flex flex-col lg:items-start items-center mt-10">
+            <!-- <h3 class="lg:block md:block hidden bg-green-200 border border-green-300 rounded-full px-2 text-green-800 text-sm">
+                🔥 50% off until March 31 <span class="text-xs relative bottom-1 right-1">th</span>
+            </h3> -->
+            <h1 class="w-[800px] font-bold lg:text-7xl text-xl lg:text-left text-center -ml-2 lg:leading-[80px] tracking-tight text-slate-900 backdrop:shadow-md"> 
+                save <span class="lg:text-6xl text-xl font-extrabold">100+</span> hours
+                on your  
+                <span 
+                class="text relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-1 before:bg-rose-600"
+                ><span class="relative text-white ">projects</span></span> 
+            </h1>
+
+            <p class="lg:w-[600px] w-[320px] lg:text-base text-sm lg:text-justify mt-5 text-center">
+                Rails Components is a ruby on <u>rails UI library</u> for developers who want to <u>finish projects faster</u>.
+                This template offers prebuilt pages, reusable rails components, JS scripts for the front-end and animations
+            </p>
+            <div class="flex gap-5 lg:flex-row md:flex-row flex-col items-center">
+                
+    
+              <%if user_signed_in?%>
+                <%= button_to stripe_starter_checkout_path,
+                class:"flex justify-center items-center w-fit gap-2 shadow- px-3 py-3 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-sm text-slate-50" do%>
+                    Design 2x faster
+                    <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
+                    <%end%>
+              <%else%>
+                  <%= link_to new_user_session_path,
+                  class:"flex justify-center items-center w-fit gap-2 shadow-lg px-3 py-3 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-sm text-slate-50 transition-all" do%>
+                      Design 2x faster
+                      <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-train-track"><path d="M2 17 17 2"/><path d="m2 14 8 8"/><path d="m5 11 8 8"/><path d="m8 8 8 8"/><path d="m11 5 8 8"/><path d="m14 2 8 8"/><path d="M7 22 22 7"/></svg>
+                    <%end%>
+              <%end%>
+              <%= link_to documentation_docs_page_free_path,class:"flex justify-center items-center w-fit gap-2 shadow-lg px-4 py-3 mt-5 group rounded-md text-sm font-semibold bg-slate-100 border border-slate-300 border-100 hover:border-slate-400 transition-all" do%>
+              <svg class="stroke-slate-700 group-hover:stroke-slate-800" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></svg>
+              explore preview components
+
+              <%end%>
+
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center text-center lg:ml-5 lg:-mt-24 p-3 rounded-2xl">
+            <%= image_tag("/hero-image-2.png",loading:"lazy",alt:"Rails Elements logo", class:"fade-right relative lg:top-10 lg:-right-10 -right-6 lg:w-[300px] lg:h-[300px] w-[140px] h-[140px] object-cover")%>
+
+        </div>
+        
+    </div>
+    <div class="flex lg:flex-row flex-col gap-8 lg:gap-20 justify-center items-center w-full h-fit mt-20 lg:mt-40 text-red-400 text-center">
+        <%# Card Grid %>
+        <div class="scale-scroll group hover:scale-105 w-72 flex flex-col items-center justify-center gap-6 
+                    bg-gradient-to-b from-red-50 to-red-50/50 border border-red-200 
+                    shadow-sm hover:shadow-md hover:border-red-300 
+                    transition-all duration-300 ease-in-out p-6 rounded-xl">
+            <svg class="stroke-red-400 w-8 h-8 group-hover:rotate-12 transition-transform duration-300" 
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" 
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                 stroke-linejoin="round" class="lucide lucide-x">
+                <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+            </svg>
+            <p class="text-slate-700 font-medium">Hours debugging components for your landing page</p>
+        </div>
+    
+        <div class="scale-scroll group hover:scale-105 w-72 flex flex-col items-center justify-center gap-6 
+                    bg-gradient-to-b from-red-50 to-red-50/50 border border-red-200 
+                    shadow-sm hover:shadow-md hover:border-red-300 
+                    transition-all duration-300 ease-in-out p-6 rounded-xl">
+            <svg class="stroke-red-400 w-8 h-8 group-hover:rotate-12 transition-transform duration-300" 
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" 
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                 stroke-linejoin="round" class="lucide lucide-hourglass">
+                <path d="M5 22h14"/><path d="M5 2h14"/>
+                <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/>
+                <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/>
+            </svg>
+            <p class="text-slate-700 font-medium">100+ Hours spent on projects just coding in just UI</p>
+        </div>
+    
+        <div class="scale-scroll group hover:scale-105 w-72 flex flex-col items-center justify-center gap-6 
+                    bg-gradient-to-b from-red-50 to-red-50/50 border border-red-200 
+                    shadow-sm hover:shadow-md hover:border-red-300 
+                    transition-all duration-300 ease-in-out p-6 rounded-xl">
+            <svg class="stroke-red-400 w-8 h-8 group-hover:rotate-12 transition-transform duration-300" 
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" 
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                 stroke-linejoin="round" class="lucide lucide-gem">
+                <path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/>
+            </svg>
+            <p class="text-slate-700 font-medium">Coding with UI rails that are not built for rails</p>
+        </div>
+    </div>
+    
+    <div class="mx-auto h-fit rounded-md p-5 space-y-1 pt-10 mt-32 hover:outline outline-1 outline-red-300 transition-all text-center font-semibold text-slate-600 bg-red-200 bg-opacity-30">
+        <p><span class="text-red-500">4 hours</span> for a landing page</p>
+        <p><span class="text-red-500">10 hours</span> for other pages</p>
+        <p><span class="text-red-500">2 hours</span> for animations</p>
+        <p><span class="text-red-500">6 hours</span> coding the front-end</p>
+        <p class="">
+            <span class="text-red-500">repeat</span> = <span class="text-xl font-mono">∞</span> hours 🐢
+        </p>
+        <p class="flex items-center justify-center gap-1 font-normal text-sm pt-7 ml-2">
+            There's faster way 
+            <svg class="-rotate-270 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </p>
+    </div>
+
+
+</div>

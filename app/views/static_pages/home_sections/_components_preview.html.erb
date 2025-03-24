@@ -1,0 +1,23 @@
+<section class="py-12 lg:py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl lg:text-3xl text-slate-900 tracking-tight font-semibold text-center mb-8">
+      Rails Components preview 🤖
+    </h2>
+    
+    <!-- First row of components -->
+    <div class="flex flex-wrap justify-center gap-4 lg:gap-5 mb-8">
+      <%= render "static_pages/components/copy_code" %>
+      <%= render "static_pages/components/loading", color: "blue" %>
+      <%= render "static_pages/components/checkbox", name: "Checkbox" %>
+      <%= render "static_pages/components/appstore" %>
+    </div>
+
+    <%= render "static_pages/components/companies_scale" %>
+
+    <!-- Second row of components -->
+    <div class="flex flex-wrap justify-center gap-8 lg:gap-20 mt-8">
+      <%= render "static_pages/components/skeleton" %>
+      <%= render "static_pages/components/social_media" %>
+    </div>
+  </div>
+</section>
