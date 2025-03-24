@@ -1,0 +1,23 @@
+  <div class="w-fit flex items-center pr-2 rounded-md outline outline-1 outline-slate-500 bg-slate-900">
+      <p class="py-3 w-full font-mono font-medium text-base text-slate-400 mx-3 text-nowrap overflow-auto " id="myText">console.log("Hello, World!")
+      </p>
+    <button class="flex items-start font-semibold py-1.5 px-3 w-fit text-sm text-center bg-slate-100  text-slate-900 rounded-md " onclick="copyContent(event.target)">
+      Copy
+    </button>
+  </div>
+  <!-- Copy & Paste script -->
+  <script>
+    let text = document.getElementById('myText').innerHTML;
+    const copyContent = async (event) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      event.textContent = "Copied!"
+      setTimeout(()=>{
+      event.textContent = "Copy"
+
+      }, 2000)
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  }
+</script>

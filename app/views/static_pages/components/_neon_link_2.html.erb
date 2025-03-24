@@ -1,0 +1,66 @@
+<%= link_to "Neon Link 2", "link", class:"btn_2 w-fit p-3 rounded-md font-semibold"%>
+<style>
+
+  
+  .btn_2 {
+
+    border: none;
+    outline: none;
+    color: #FFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+  }
+  .btn_2::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+  }
+
+  .btn_2::before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      #FF0000, #FF7300, #FFFB00, #48FF00,
+      #00FFD5, #002BFF, #FF00C8, #FF0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(0px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 12px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  .btn_2:hover::before {
+    opacity: 1;
+  }
+  
+  .btn_2:active:after {
+    background: transparent;
+  }
+  
+  .btn_2:active {
+    color: #000;
+    font-weight: bold;
+  }
+</style>

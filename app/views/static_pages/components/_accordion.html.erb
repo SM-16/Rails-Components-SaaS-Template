@@ -1,0 +1,24 @@
+<div class="w-full">
+    <!-- notice here, the key rule is `[&_svg]:open:-rotate-180` -->
+    <details class="border-b w-full h-full border-slate-300  rounded-t-md [&_svg]:open:-rotate-180">
+      <!-- notice here, we have disabled the summary's default triangle/arrow -->
+      <summary class="h-full w-full flex cursor-pointer p-4 list-none items-center gap-4">
+        <div>
+          <!-- notice here, we added our own triangle/arrow svg -->
+          <svg class="rotate-0 transform text-slate-700 transition-all duration-300" fill="none" height="20" width="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <%= title%>
+      </summary>
+  
+      <p class="w-full py-4 ml-9 text-slate-700">
+        <%= description%>
+        </p>
+    </details>
+</div>
+<style>
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+</style>

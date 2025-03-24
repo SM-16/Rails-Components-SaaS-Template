@@ -1,0 +1,41 @@
+
+<div class="flex flex-col justify-center items-center h-fit w-fit rounded-md p-5 border border-slate-200">
+    <div class="w-full">
+        <h3 class="flex items-end gap-2 font-semibold text-xl text-slate-700 mb-5">
+            Free
+        </h3>
+        <h3 class="flex flex-col justify-end gap-2 font-bold text-5xl text-slate-700 ">
+            <div class="flex items-center gap-2">
+                $0
+            </div>
+        <span class="text-sm font-medium">no credit card required</span>
+        </h3>
+        <ul class="mt-8 list-inside space-y-5">
+            <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                Benefit #1
+            </li>
+            <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                Benefit #2
+            </li>
+            <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                Benefit #3
+            </li>
+    
+        </ul>
+
+    </div>
+    <%if user_signed_in?%>
+    <%= link_to "Dashboard", "#", class:"flex justify-center items-center gap-2 w-[300px] p-3 mt-5 group rounded-md font-semibold bg-black  text-slate-50 transition-all"%>
+
+    <%else%>
+        <%= link_to "#",
+        class:"flex justify-center items-center gap-2 w-[300px] p-3 mt-5 group rounded-md font-semibold bg-rose-600 hover:bg-rose-700 text-slate-50 transition-all" do%>
+            Log in
+            <svg class="group-hover:rotate-180 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+        <%end%>
+    <%end%>
+
+</div>

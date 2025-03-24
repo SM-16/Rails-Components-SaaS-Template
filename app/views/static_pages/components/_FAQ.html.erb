@@ -1,0 +1,17 @@
+<div class="w-[90vw] flex justify-around items-baseline pb-20">
+    <h2 class="text-slate-800 text-5xl font-bold" id="FAQ">FAQ's</h2>
+    <div class="w-[800px]">
+
+        <%= render "static_pages/components/accordion", title:"How would I import your package?", 
+        description:"You can import the package via github, right now I'm using http://gitfront.io to only share for the ones who buy the package"%>
+        <%= render "static_pages/components/accordion", title:"How would I use it in an html.erb file?", 
+        description:"all the components are html.erb partials in a folder, you can clone the folder and add it to your project app/views"%>
+        <%= render "static_pages/components/accordion", title:"What is the benefit to this versus other packages I could buy? ", 
+        description:"I know half of the components I sell are completely replaceable with chatGPT. 
+
+The other half are more complex and many have JS scripts for the front-end. (Don't worry I'm going to make the UI library bigger).
+
+Also is a UI library focused on rails developers and my goal for some components is to made them as reusable as react components"%>
+
+    </div>
+</div>

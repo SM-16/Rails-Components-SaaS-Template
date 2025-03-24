@@ -1,0 +1,12 @@
+<div class="flex items-center gap-5 bg-<%= bg_color%>-50 w-fit line-clamp-2 max-w-[800px] border border-neutral-200 rounded-lg pr-5">
+    <%= image_tag("https://images.unsplash.com/photo-1542452376175-82b6fb643412?q=80&w=1301&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", 
+    class:"rounded-l-lg cover-fit w-[#{size_px}px] h-[#{size_px}px]")%>
+    <div class="">
+        <h2 class="font-bold text-xl tracking-tight">
+            <%= title%>
+        </h2>
+        <p class="line-clamp-2 text-sm">
+            <%= text%>
+        </p>
+    </div>
+</div>
