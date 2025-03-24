@@ -13,20 +13,6 @@
     
     <div class="flex w-full md:justify-end justify-center items-center gap-4 md:pb-0 pb-2">
         <% if user_signed_in? %>
-        <% if current_user.plan == "starter" %>
-            <%= link_to "Documentation", documentation_docs_page_path, 
-            class:"px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors" %>
-            <a class="hover:text-slate-600 transition-colors" href="https://gitfront.io/r/S213123/U5uHNGVbXxcE/Rails-Elements/">Components</a>
-            <a class="hover:text-slate-600 transition-colors" href="https://github.com/SM-16/Rails-Components-SaaS-Template">SaaS template</a>
-        <% elsif current_user.plan == "premium" %>
-                <%= link_to "Documentation", documentation_docs_page_updated_path,
-                    class:"px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors" %>
-                <a class="hover:text-slate-600 transition-colors" href="https://gitfront.io/r/S213123/U5uHNGVbXxcE/Rails-Elements/">Components</a>
-                <a class="hover:text-slate-600 transition-colors" href="https://github.com/SM-16/Rails-Components-SaaS-Template">SaaS template</a>
-            <% else %>
-                <%= link_to "Preview", documentation_docs_page_free_path, 
-                    class:"px-4 py-2 rounded-lg bg-slate-900 text-white hover:bg-slate-800 transition-colors" %>
-            <% end %>
 
             <span class="px-3 py-1.5 rounded-lg border border-red-200 bg-red-50 text-red-600 font-medium">
                 <%= current_user.plan %>
@@ -37,8 +23,7 @@
                 class:"px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors" %>
         <% else %>
             <div class="flex w-full md:justify-end justify-center items-center gap-4 md:pb-0 pb-2">
-                <%= link_to "Preview", documentation_docs_page_free_path, 
-                    class:"px-4 py-2 rounded-lg bg-gradient-to-r from-slate-800 to-slate-900 text-white font-medium hover:scale-105 hover:shadow-lg hover:shadow-slate-200 transition-all duration-300" %>
+                
                 <%= link_to "Log In", new_user_session_path, 
                     class:"px-4 py-2 rounded-lg hover:bg-slate-100 transition-colors" %>
                 <%= link_to "Sign Up", new_user_registration_path, 
