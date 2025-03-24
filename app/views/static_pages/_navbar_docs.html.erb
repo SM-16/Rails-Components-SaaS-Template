@@ -1,0 +1,37 @@
+
+<header class="w-full fixed top-0 z-50 px-5  h-[100px] flex items-center *:font-semibold border-b text-slate-800 bg-white">
+    <nav class="flex items-center gap-5 h-full">
+        <%= link_to  root_path, class:"font-bold text-lg text-gradient w-10" do%>
+            <%= image_tag("/icon(17).png")%>
+        
+        <%end%>
+        <%= link_to "Home", static_pages_home_path%>
+        <%= link_to "Pricing", static_pages_home_path%>
+        
+        
+        
+        
+    </nav>
+    <div class="flex lg:flex-row md:flex-row flex-col w-full justify-end items-center gap-8 ">
+        <%if user_signed_in?%>
+            <% if current_user.plan =="starter"%>
+                <%= link_to "Documentation", documentation_docs_page_path%>
+            <% elsif current_user.plan =="premium"%>
+                <%= link_to "Documentation", documentation_docs_page_updated_path%>
+            <%else%>
+                <%= link_to "Documentation", documentation_docs_page_free_path%>
+            <%end%>
+            <p class="border border-red-300 bg-red-100 text-red-500 rounded-md px-3 p-1">
+                <%= current_user.plan%>
+            </p>
+            <%= button_to "Log out", destroy_user_session_path, method: :delete%>            
+        <%else%>
+            <div class="flex lg:gap-5 md:gap-5 gap-3">
+
+                <%= link_to "Log In", new_user_session_path, class:"flex gap-5"%>
+                <%= link_to "Sign Up", new_user_registration_path, class:"flex gap-5"%>
+            </div>
+            
+        <%end%>
+    </div>
+</header>
